@@ -30,7 +30,7 @@
  $conn->close();
 ?>
 
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,7 +91,7 @@
 </div> 
 </div>
 
-<div class="container"><!-- Sección para añadir placas -->
+<!-- /*<div class="container">
     <div class="columns is-centered">
         <div id="placas" class="has-text-left column is-half">
                 <div id="m-placa" class="box is-primary">
@@ -146,7 +146,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
   <script>
       var placas = <?php echo json_encode($a) ?>; //json es JavaScript Object Notation, sirve para que entienda el java script el php  
