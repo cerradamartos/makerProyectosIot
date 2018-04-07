@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="styles/bulma.css">
+    <script src='scripts/script.js'></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <nav class='navbar is-primary'>
+        <!-- hacemos una nav bar con color turquesa (ver bulma.io) -->
+        <div class='navbar-brand'>
+            <div class="navbar-item">
+                <span class="icon">
+                    <i class="fas fa-cloud"></i>
+                </span>
+                <h2 class="title is-6">Maker Proyects Iot Cloud</h2>
+            </div>
+
+        </div>
+        <div class='navbar-end'>
+            <div class="navbar-item">
+                <a href="index.php" class="navbar-link">Inicio</a>
+            </div>
+            <div class='navbar-item'>
+                <!--creamos un apartado item y dentro de este item creamos un botón (el botón lleva al repositorio)-->
+                <a href='https://github.com/cerradamartos/makerProyectosIot' class='button is-dark' target="_blank">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Github</span>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half is-narrow">
+                <div class="box">
+
+                    <form>
+                        <h4 class="title is-4 has-text-centered">Cualidades de la placa</h4>
+
+                        <div class="field">
+                            <label for="" class="label">
+                                Nombre de la placa:</label>
+                            <div class="control">
+                                <input id='board-name' type='text' class="input" placeholder='Nombre'>
+
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="" class="label">Descripción corta:</label>
+                            <div class="control">
+                                <input id='board-desc' type='text' class="input" placeholder='¿Qué hace la placa?'>
+                            </div>
+                        </div>
+
+                        <label for="" class="label">Sensores utilizados:</label>
+                        <div class="field is-horizontal">
+                            <!-- para que salgan en horizontal los sensores -->
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <!--control centra y coloca, field forma una parte de la tabla -->
+                                        <input id='sensor-1' type='text' class="input" placeholder='Sensor 1'>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="control">
+                                        <input id='sensor-2' type='text' class="input" placeholder='Sensor 2'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <label for="" class="checkbox">
+
+                                    <input onclick='desactivarSensores()' type="checkbox">
+                                    <!-- conecta con la función de desactivar la escritura en los sensores de newboardform.js -->
+                                    No hay sensores conectados a la placa
+                                </label>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="control has-text-centered">
+                        <!-- control centra y lo pone hacia la izquierda -->
+                        <button onclick='createNewBoard()' type="submit" class="button is-primary">
+                            <span class="icon">
+                                <i class="fas fa-bookmark"></i>
+                            </span>
+                            <span>
+                                Guardar placa
+                            </span>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./scripts/newboardform.js"></script>
+
+</html>
